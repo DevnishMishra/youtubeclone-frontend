@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function VideoCard({ video }) {
   return (
-    <div className="p-2 hover:scale-105 transform transition duration-300 cursor-pointer">
+    <div
+      className="p-2 hover:scale-105 transform transition duration-300 cursor-pointer
+     hover:scale-105 transform transition duration-300 "
+    >
       <Link to={`/video/${video.videoId}`}>
         <img
           src={video.thumbnailUrl}
