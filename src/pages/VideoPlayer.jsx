@@ -12,6 +12,14 @@ export default function VideoPlayer() {
         <h3 className="font-semibold">Description</h3>
         <p>This is a sample video description.</p>
       </div>
+      <div className="flex gap-4 mt-2">
+        <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">
+          👍 Like
+        </button>
+        <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">
+          👎 Dislike
+        </button>
+      </div>
     </div>
   );
 }
