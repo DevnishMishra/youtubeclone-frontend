@@ -1,25 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import VideoPlayer from "./pages/VideoPlayer";
+import ChannelPage from "./pages/ChannelPage";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-
-      <div className="flex">
-        <Sidebar />
-
-        {/* Main Content */}
-        <main className="flex-1 ml-0 md:ml-64 p-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/video/:id" element={<VideoPlayer />} />
-          </Routes>
-        </main>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/video/:id" element={<VideoPlayer />} />
+        <Route path="/channel/:id" element={<ChannelPage />} />
+      </Routes>
     </Router>
   );
 }
